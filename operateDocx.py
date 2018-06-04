@@ -90,14 +90,14 @@ def writeDocx(contentList,docxName):
         #         table.rows[m].cells[n].text = str(q + 1) +')'+ str(contentList[1][q])
         #         q = q + 1
 
-        results = ''
-        num = 1
-        for m in range(60):
-            results = results +'^'+ str(num)+'>'+str(contentList[1][q])+'$'
-            q = q + 1
-            num +=1
-        par = document.add_paragraph(u'本页答案： ')
-        par.add_run(results).italic = True
+#        results = ''
+#        num = 1
+#        for m in range(60):
+#            results = results +'^'+ str(num)+'>'+str(contentList[1][q])+'$'
+#            q = q + 1
+#            num +=1
+#        par = document.add_paragraph(u'本页答案： ')
+#        par.add_run(results).italic = True
         print 'now in the '+ str(p) + 'step'
         t = t +1
         # document.add_paragraph('----------------------------------------------------------------------------------------------------------------------')

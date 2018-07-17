@@ -107,6 +107,21 @@ def writeDocx(contentList,docxName):
 # def id(id=0):
 #     return id+1
 
+def saveExpression(Expressions,docxName):
+    document = Document()
+    total = len(Expressions)
+    print 'Total Expressions are: '+str(total)
+    
+    index=0
+    while index<total:
+        table = document.add_table(rows=25, cols=4)
+        for i in range(25):
+            for j in range(4):
+                table.rows[i].cells[j].text = Expressions[index]
+                index = index+1
+        document.add_page_break()
+    document.save(docxName)
+
 if __name__=="__main__":
     print 'this is the main method'
     operDocx()
